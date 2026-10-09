@@ -1,0 +1,23 @@
+[project]
+name = "reto-co2"
+version = "1.0.0"
+description = "Análisis de las emisiones de CO2 con datos de Our World in Data"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "SIM", "UP", "RUF", "PL"]
+ignore = [
+    "PLR0913",  # funciones de gráficos con varios parámetros
+    "RUF001",   # caracteres como "²" o "₂" en textos son intencionados
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["PLR2004"]  # en los tests los valores esperados se escriben tal cual
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
