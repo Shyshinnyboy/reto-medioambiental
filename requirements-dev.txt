@@ -1,5 +1,0 @@
-# Dependencias de desarrollo: tests y revisión de estilo.
-# Instala también las dependencias del programa (requirements.txt).
--r requirements.txt
-pytest==9.1.1
-ruff==0.16.10

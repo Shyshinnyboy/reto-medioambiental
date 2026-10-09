@@ -88,8 +88,7 @@ reto-medioambiental/
 ├── resultados/            # salidas generadas: gráficos PNG y CSV
 ├── .vscode/
 │   └── settings.json      # intérprete de Python para VS Code
-├── requirements.txt       # dependencias del programa
-├── requirements-dev.txt   # dependencias de desarrollo (tests y estilo)
+├── requirements.txt       # dependencias (programa, tests y estilo)
 ├── pyproject.toml         # configuración de ruff y pytest
 ├── .gitignore
 └── LICENSE                # licencia MIT
@@ -163,8 +162,9 @@ Alemania         867.88         572.32         -34.06
 
 ## Tests y estilo de código
 
+pytest y ruff vienen incluidos en `requirements.txt`, así que no hace falta ningún paso extra:
+
 ```bash
-pip install -r requirements-dev.txt
 python -m pytest        # 17 tests de los cálculos, con datos inventados
 ruff check .            # revisión de estilo y errores
 ruff format .           # formato automático
